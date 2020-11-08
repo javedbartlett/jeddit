@@ -1,4 +1,4 @@
-# jeddit2
+# jeddit
 
 Currently a work in Progress
 
