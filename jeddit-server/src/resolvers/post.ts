@@ -50,7 +50,6 @@ export class PostResolver {
     @Arg("id", () => Int) id: number,
     @Ctx() { em }: MyContext
   ): Promise<boolean> { // typescript type also returns a post or null
-    const post = await em.findOne(Post, {id})
     try {
       await em.nativeDelete(Post, {id})
       return true;
