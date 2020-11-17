@@ -5,7 +5,7 @@ import { MyContext } from "../types";
 @Resolver()
 export class PostResolver {
   @Query(() => [Post]) // set graphql type
-  posts(@Ctx() { em }: MyContext): Promise<Post[]> {
+  async posts(@Ctx() { em }: MyContext): Promise<Post[]> {
     //set graphql type then typescript type
     return em.find(Post, {});
   }
